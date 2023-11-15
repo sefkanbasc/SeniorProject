@@ -1,0 +1,148 @@
+<title>Sayım Listesi</title>
+<body>
+  <div class="container">
+    <br>
+    <% if (locals.validation_error != undefined || locals.success_message != undefined || locals.login_error != undefined) { %>
+    <%- include('../../../partials/_mesaj') %> 
+    <% } %>   
+    <table class="table mt-4">
+      <thead>
+        <tr id="tableHeaderRow">
+          <th scope="col">Sayim Adı</th>
+          <th scope="col">Sayim Rafı</th>
+          <th scope="col">erpOfis</th>
+          <th scope="col">erpMagaza</th>
+          <th scope="col">erpDepo</th>
+          <th scope="col">Sayım Açıklaması</th>
+          <th scope="col">Sayım Detayları</th>
+          <th scope="col">GeriAl/Arşivle</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% Users.forEach(element => { %>
+        <tr>
+          <td><%-element.SayimAdi %></td>
+          <td><%-element.RafAdi %></td>
+          <td><%-element.sayimYapilanOfis %></td>
+          <td><%-element.sayimYapilanMagaza %></td>
+          <td><%-element.sayimYapilanDepo %></td>
+          <td><%-element.SayimAciklama %></td>
+          <td>
+            <button type="button" class="btn btn-sm btn-primary" data-toggle="modal"><a href="/financer/sayimListesiDetay?id=<%-element.sayimUID %>&pg=1">Detaylar</a></button>
+          </td>
+          <td>
+            <button type="button" class="btn btn-sm btn-info" data-toggle="modal" data-target="#<%-element.sayimUID.replace(/\s/g, '').replace(/\d/g, '').replace(/[&%.+(\^)]/g, '') %>2">Geri Al</button>
+            <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#<%-element.sayimUID.toString().replace(/\s/g, '').replace(/\d/g, '').replace(/[&%.+(\^)]/g, '') %>">Arşivle</button>
+          </td>
+        </tr>
+        <% }) %>
+      </tbody>
+    </table>
+    <% if (!ozet) { %>
+      <div class="flex justify-between mt-4">
+        <% if (PageNumber > 1) { %>
+          <a href="/financer/onaylanansayimListesi?pg=<%-PageNumber - 1 %>" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Önceki Sayfa</a>
+        <% } %>
+        
+        <a href="/financer/onaylanansayimListesi?pg=<%-Number(PageNumber) + 1 %>" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Sonraki Sayfa</a>
+      </div>
+    <% } else { %>
+      <div class="flex justify-between mt-4">
+        <% if (PageNumber > 1) { %>
+          <a href="/ozetsayimListesi?pg=<%-PageNumber - 1 %>" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Önceki Sayfa</a>
+        <% } %>
+        
+        <a href="/ozetsayimListesi?pg=<%-Number(PageNumber) + 1 %>" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Sonraki Sayfa</a>
+      </div>
+      <% } %>
+      <% Users.forEach(element => { %>
+        <!-- Modal -->
+        <form action="/financer/archiveSayim/<%-element.sayimUID %>" method="post" enctype="application/x-www-form-urlencoded" class="modal fade" id="<%-element.sayimUID.toString().replace(/\s/g, '').replace(/\d/g, '').replace(/[&%.+(\^)]/g, '') %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Onaylıyor musunuz?</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <%-element.SayimAdi %> arşivlemeyi onaylıyor musunuz?
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Kapat</button>
+                <button type="submit" class="btn btn-warning">Arşivle</button>
+              </div>
+            </div>
+          </div>
+        </form>
+        <% }) %>
+        <% Users.forEach(element => { %>
+          <!-- Modal -->
+          <form action="/financer/geriAl/<%-element.sayimUID %>" method="post" enctype="application/x-www-form-urlencoded" class="modal fade" id="<%-element.sayimUID.replace(/\s/g, '').replace(/\d/g, '').replace(/[&%.+(\^)]/g, '') %>2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLongTitle">Geri Almayı Onaylıyor musunuz?</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <%-element.SayimAdi %> onaylamayı geri almak istiyor musunuz?
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Kapat</button>
+                      <button type="submit" class="btn btn-info">Geri Al</button>
+                    </div>
+                  </div>
+                </div>
+          </form>
+          <% }) %>
+    <br>
+    <br>
+
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    function searchTable() {
+      var input, filter, table, tr, td, i, txtValue;
+      input = document.getElementById("searchInput");
+      filter = input.value.toUpperCase();
+      table = document.querySelector(".table");
+      tr = table.getElementsByTagName("tr");
+
+      // Başlıkları gizlememek için tr'yi görünür yapma
+      var tableHeaderRow = document.getElementById("tableHeaderRow");
+      tableHeaderRow.style.display = "";
+
+      for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td");
+        var found = false;
+        for (var j = 0; j < td.length; j++) {
+          txtValue = td[j].textContent || td[j].innerText;
+          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            found = true;
+            break;
+          }
+        }
+        if (found) {
+          tr[i].style.display = "";
+          tableHeaderRow.style.display = "";
+        } else {
+          tr[i].style.display = "none";
+          tableHeaderRow.style.display = "";
+        }
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      var input = document.getElementById("searchInput");
+      input.addEventListener("input", function () {
+        searchTable();
+      });
+    });
+  </script>
+</body>

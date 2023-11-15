@@ -1,0 +1,102 @@
+<title>Sayım Listesi</title>
+<body>
+  <div class="container">
+    <br>
+    <% if (locals.validation_error != undefined || locals.success_message != undefined || locals.login_error != undefined) { %>
+    <%- include('../../../partials/_mesaj') %> 
+    <% } %>
+
+      
+      
+    <table class="table mt-4">
+      <thead>
+        <tr id="tableHeaderRow">
+          <th scope="col">Arşiv Tarihi</th>
+          <th scope="col">Sayım Adı</th>
+          <th scope="col">Sayım Rafı</th>
+          <th scope="col">Sayım Deposu</th>
+          <th scope="col">Sayım Mağazası</th>
+          <th scope="col">Sayım Ofisi</th>
+          <th scope="col">Detay</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% Users.forEach(element => { %>
+        <tr>
+          <td><%-element.formattedDate %></td>
+          <td><%-element.SayimAdi %></td>
+          <td><%-element.RafAdi %></td>
+          <td><%-element.sayimYapilanDepo %></td>
+          <td><%-element.sayimYapilanMagaza %></td>
+          <td><%-element.sayimYapilanOfis %></td>
+          <td><a href="/financer/sayimListesiDetay?id=<%-element.sayimUID %>" class="inline-block px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-blue-600 border border-transparent rounded-md active:bg-blue-700 hover:bg-blue-700 focus:outline-none focus:shadow-outline-blue">Detaylar</a></td>
+        </tr>
+        <% }) %>
+      </tbody>
+    </table>
+    <% if (!ozet) { %>
+      <div class="flex justify-between mt-4">
+        <% if (PageNumber > 1) { %>
+          <a href="/financer/archiveList?pg=<%-PageNumber - 1 %>" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Önceki Sayfa</a>
+        <% } %>
+        
+        <a href="/financer/archiveList?pg=<%-Number(PageNumber) + 1 %>" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Sonraki Sayfa</a>
+      </div>
+    <% } else { %>
+      <div class="flex justify-between mt-4">
+        <% if (PageNumber > 1) { %>
+          <a href="/financer/kesinlesensayimListesi?pg=<%-PageNumber - 1 %>" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Önceki Sayfa</a>
+        <% } %>
+        
+        <a href="/financer/kesinlesensayimListesi?pg=<%-Number(PageNumber) + 1 %>" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Sonraki Sayfa</a>
+      </div>
+      <% } %>
+    
+    
+    <br>
+    <br>
+
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    function searchTable() {
+      var input, filter, table, tr, td, i, txtValue;
+      input = document.getElementById("searchInput");
+      filter = input.value.toUpperCase();
+      table = document.querySelector(".table");
+      tr = table.getElementsByTagName("tr");
+
+      // Başlıkları gizlememek için tr'yi görünür yapma
+      var tableHeaderRow = document.getElementById("tableHeaderRow");
+      tableHeaderRow.style.display = "";
+
+      for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td");
+        var found = false;
+        for (var j = 0; j < td.length; j++) {
+          txtValue = td[j].textContent || td[j].innerText;
+          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            found = true;
+            break;
+          }
+        }
+        if (found) {
+          tr[i].style.display = "";
+          tableHeaderRow.style.display = "";
+        } else {
+          tr[i].style.display = "none";
+          tableHeaderRow.style.display = "";
+        }
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      var input = document.getElementById("searchInput");
+      input.addEventListener("input", function () {
+        searchTable();
+      });
+    });
+  </script>
+</body>

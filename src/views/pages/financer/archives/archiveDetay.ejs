@@ -1,0 +1,169 @@
+<title>Sayım Listesi</title>
+<body>
+  <div class="container">
+    <br>
+    <% if (locals.validation_error != undefined || locals.success_message != undefined || locals.login_error != undefined) { %>
+    <%- include('../../../partials/_mesaj') %> 
+    <% } %>
+
+      
+      
+    <table class="table mt-4">
+      <thead>
+        <tr id="tableHeaderRow">
+          <th scope="col">Barkod</th>
+          <th scope="col">Ürün Adı</th>
+          <th scope="col">Markası</th>
+          <th scope="col">Ürün Kodu</th>
+          <th scope="col">Envanter</th>
+          <th scope="col">Sayılan Adet</th>
+          <th scope="col">Aradaki Fark</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% Users.forEach(element => { %>
+        <tr>
+          <td><%-element.Barkod %></td>
+          <td><%-element['Ürün\r\nAdı'] %></td>
+          <td><%-element.Brand %></td>
+          <td><%-element['Ürün\r\nKodu'] %></td>
+          <td><%-element.SayilmasiGerekenAdet %></td>
+          <td><%-element.SayilanAdet %></td>
+          <td><%-element.AradakiFark %></td>
+        </tr>
+        <% }) %>
+      </tbody>
+    </table>
+    <% if (!ozet) { %>
+      <div class="flex justify-between mt-4">
+        <% if (PageNumber > 1) { %>
+          <a href="/financer/kesinlesensayimListesi?pg=<%-PageNumber - 1 %>" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Önceki Sayfa</a>
+        <% } %>
+        
+        <a href="/financer/kesinlesensayimListesi?pg=<%-Number(PageNumber) + 1 %>" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Sonraki Sayfa</a>
+      </div>
+    <% } else { %>
+      <div class="flex justify-between mt-4">
+        <% if (PageNumber > 1) { %>
+          <a href="/financer/kesinlesensayimListesi?pg=<%-PageNumber - 1 %>" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Önceki Sayfa</a>
+        <% } %>
+        
+        <a href="/financer/kesinlesensayimListesi?pg=<%-Number(PageNumber) + 1 %>" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Sonraki Sayfa</a>
+      </div>
+      <% } %>
+    
+    
+    <br>
+    <br>
+
+  </div>
+  <% Users.forEach(element => { %>
+  <!-- Modal -->
+  <form action="/financer/statusOK/<%-element.Barkod %>" method="post" enctype="application/x-www-form-urlencoded" class="modal fade" id="<%-element._id.toString().replace(/\s/g, '').replace(/\d/g, '').replace(/[&%.+(\^)]/g, '') %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Silmeyi Onaylıyor musunuz?</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <%-element['Ürün\r\nAdı'] %> girilen değerleri onaylıyor musunuz?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Kapat</button>
+          <button type="submit" class="btn btn-success">Onayla</button>
+        </div>
+      </div>
+    </div>
+  </form>
+  <% }) %>
+  <% Users.forEach(element => { %>
+    <!-- Modal -->
+    <form action="/financer/statusFalse/<%-element.Barkod %>" method="post" enctype="application/x-www-form-urlencoded" class="modal fade" id="<%-element['Ürün\r\nAdı'].replace(/\s/g, '').replace(/\d/g, '').replace(/[&%.+(\^)]/g, '') %>2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Silmeyi Onaylıyor musunuz?</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <%-element['Ürün\r\nAdı'] %> girilen değerleri redddetmek istiyor musunuz?
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Kapat</button>
+                <button type="submit" class="btn btn-danger">Reddet</button>
+              </div>
+            </div>
+          </div>
+    </form>
+    <% }) %>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    function searchTable() {
+      var input, filter, table, tr, td, i, txtValue;
+      input = document.getElementById("searchInput");
+      filter = input.value.toUpperCase();
+      table = document.querySelector(".table");
+      tr = table.getElementsByTagName("tr");
+
+      // Başlıkları gizlememek için tr'yi görünür yapma
+      var tableHeaderRow = document.getElementById("tableHeaderRow");
+      tableHeaderRow.style.display = "";
+
+      for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td");
+        var found = false;
+        for (var j = 0; j < td.length; j++) {
+          txtValue = td[j].textContent || td[j].innerText;
+          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            found = true;
+            break;
+          }
+        }
+        if (found) {
+          tr[i].style.display = "";
+          tableHeaderRow.style.display = "";
+        } else {
+          tr[i].style.display = "none";
+          tableHeaderRow.style.display = "";
+        }
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      var input = document.getElementById("searchInput");
+      input.addEventListener("input", function () {
+        searchTable();
+      });
+    });
+  </script>
+</body>
+<script>
+    async function downloadDataAsExcel() {
+      const response = await fetch('/financer/download-excelAccepted'); // Sunucuya indirme isteği gönder
+      console.log(response)
+      if (response.ok) {
+        const blob = await response.blob(); // Sunucudan gelen veriyi blob olarak al
+        
+        const url = URL.createObjectURL(blob); // Blob'u URL'e dönüştür
+  
+        const a = document.createElement('a'); // Yeni bir a elementi oluştur
+        a.href = url;
+        a.download = 'Table.xlsx'; // İndirilecek dosyanın adı
+        a.click(); // Otomatik indirme işlemini tetikle
+  
+        URL.revokeObjectURL(url); // URL'i temizle
+      } else {
+        console.error('İndirme başarısız oldu.');
+      }
+    }
+  
+    const downloadButton = document.getElementById('downloadButton');
+    downloadButton.addEventListener('click', downloadDataAsExcel);
+  </script>

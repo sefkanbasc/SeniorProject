@@ -1,0 +1,63 @@
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="/general/img/favicon.png">
+	<title>Karabuk Üniversitesi</title>
+	<!-- Bootstrap CSS -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.17/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<header class="bg-gray-200">
+	<div class="container mx-auto py-4 flex justify-between items-center">
+		<h1 class="text-xl font-bold">Karabuk Üniversitesi</h1>
+		<div style="z-index: 1;">
+            <a href="/admin" class="mr-4">Anasayfa</a>
+            
+            <div class="relative inline-block">
+              <button class="bg-gray-100 hover:bg-gray-200 px-4 py-2 rounded">Kullanıcılar</button>
+              <ul class="absolute hidden bg-white py-2 rounded shadow-md mt-2">
+                <li><a href="/admin/kullaniciEkle" class="block px-4 py-2 hover:bg-gray-100">Kullanıcı Ekle</a></li>
+                <li><a href="/admin/kullanicilariListele" class="block px-4 py-2 hover:bg-gray-100">Kullanıcıları Listele</a></li>
+              </ul>
+            </div>
+            
+            <div class="relative inline-block">
+              <button class="bg-gray-100 hover:bg-gray-200 px-4 py-2 rounded">Makaleler</button>
+              <ul class="absolute hidden bg-white py-2 rounded shadow-md mt-2">
+                <li><a href="/admin/makaleListele" class="block px-4 py-2 hover:bg-gray-100">Makaleleri Listele</a></li>
+              </ul>
+            </div>
+            <div class="relative inline-block">
+              <button class="bg-gray-100 hover:bg-gray-200 px-4 py-2 rounded">Ayarlar</button>
+              <ul class="absolute hidden bg-white py-2 rounded shadow-md mt-2">
+                <li><a href="/admin/sifredegistir" class="block px-4 py-2 hover:bg-gray-100">Şifre Değiştir</a></li>
+              </ul>
+            </div>
+
+            <a href="/admin/logout">Çıkış Yap</a>
+          </div>
+          
+	</div>
+</header>
+<script>
+    // Açılır menülerin görünürlüğünü yönetmek için JavaScript kullanılıyor
+    const dropdowns = document.querySelectorAll('.relative.inline-block');
+  
+    dropdowns.forEach((dropdown) => {
+      const button = dropdown.querySelector('button');
+      const menu = dropdown.querySelector('ul');
+  
+      button.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+      });
+  
+      // Menü dışında tıklandığında menünün kapanmasını sağlamak için
+      document.addEventListener('click', (event) => {
+        if (!dropdown.contains(event.target)) {
+          menu.classList.add('hidden');
+        }
+      });
+    });
+  </script>
+<%-body %>

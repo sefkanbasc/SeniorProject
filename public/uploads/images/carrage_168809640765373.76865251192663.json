@@ -1,0 +1,382 @@
+[{
+  "_id": {
+    "$oid": "636288f45828aad06c3019a6"
+  },
+  "email": "test@gmail.com",
+  "sifre": "$2a$10$n8ROGCa56Q3iK0vqGGQHhulcB1dBuDh3sjZ0K1e9bHWeMAC.d.XNK",
+  "wishlist": [
+    "1"
+  ],
+  "sabittelefon": "+216 311 74 84",
+  "gsmtelefon": "5300993570",
+  "tckimlik": "64795157790",
+  "sirketunvani": "Patron",
+  "sirketkurulustarihi": "2022-05-19",
+  "sirketadresi": "Leydi Güzellik Salonu Tedaş Yanı Hoşgörü Kafe Karşısı Nusaybin, 47300",
+  "vergidairesiili": "İstanbul",
+  "vergikimliknumarasi": "56546123",
+  "vergidairesi": "45454",
+  "dukkanadi": "Test Dükkanı",
+  "dukkanurunleri": [
+    "123",
+    "TU Profili769854:100:500"
+  ],
+  "userid": "3",
+  "verfication_number": "s",
+  "dukkanurl": "317138",
+  "dukkanphoto": "yapx_167203058122966.25962231029592.JPG",
+  "dukkanili": "34:İstanbul",
+  "dukkanilcesi": "Kadıköy",
+  "dukkanyorum": [
+    "Yapx: Bu dükkan yorumlarınızı bekliyor.:5",
+    "Mert Dükkanı:Başarılı dükkan:3"
+  ],
+  "dukkanoysayisi": "2",
+  "dukkan_star": [
+    "5",
+    "3"
+  ],
+  "dukkan_av": "4",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1667401972173"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1676287614441"
+    }
+  },
+  "__v": 0,
+  "usertoken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0aW1lIjoiTW9uIEphbiAwMiAyMDIzIDEyOjUwOjQ2IEdNVCswMzAwIChHTVQrMDM6MDApIiwiZW1haWwiOiJ0ZXN0QGdtYWlsLmNvbSIsImlhdCI6MTY3MjY1MzA0NiwiZXhwIjoxNjczMjU3ODQ2fQ.JTTYLFn7DIqeHYiXoYn4CksPTCIE4OqMs1l7x_ms9_U",
+  "Dukkan_UniqueID": "Yapx_321321"
+},{
+  "_id": {
+    "$oid": "63d10034fbbc33ac8b4ef65a"
+  },
+  "isim": "izzet",
+  "soyisim": "ayan",
+  "email": "testhesabi@gmail.com",
+  "sifre": "$2a$10$n8ROGCa56Q3iK0vqGGQHhulcB1dBuDh3sjZ0K1e9bHWeMAC.d.XNK",
+  "wishlist": [
+    "1"
+  ],
+  "dukkanurunleri": [],
+  "userid": "1",
+  "verfication_number": "699243",
+  "dukkanyorum": [],
+  "dukkan_star": [],
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1674641460415"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1674641742998"
+    }
+  },
+  "__v": 0,
+  "dogrulama_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0aW1lIjoiV2VkIEphbiAyNSAyMDIzIDEzOjExOjAwIEdNVCswMzAwIChHTVQrMDM6MDApIiwiZW1haWwiOiJ0ZXN0aGVzYWJpQGdtYWlsLmNvbSIsImlhdCI6MTY3NDY0MTQ2MCwiZXhwIjoxNjc0NzI3ODYwfQ.g1jmQmk1-3f-1ua49x0cn8MWJYK_jVNKkJlsNAjg70w",
+  "usertoken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0aW1lIjoiV2VkIEphbiAyNSAyMDIzIDEzOjE1OjQyIEdNVCswMzAwIChHTVQrMDM6MDApIiwiZW1haWwiOiJ0ZXN0aGVzYWJpQGdtYWlsLmNvbSIsImlhdCI6MTY3NDY0MTc0MiwiZXhwIjoxNjc1MjQ2NTQyfQ.yWD3HzqB0YQVD0blFLbUhe0xVx2zZCyQFkGtPKNklCo"
+},{
+  "_id": {
+    "$oid": "63d10e20910a5c5701e2680b"
+  },
+  "email": "ademongel@hotmail.com",
+  "sifre": "$2a$10$LTkXN50xnL6PaVwyfVh4lu460JKLwGiPnMdHsFWvA6TT/L7td31bS",
+  "wishlist": [
+    "1"
+  ],
+  "sabittelefon": "5555555555",
+  "gsmtelefon": "5555555555",
+  "tckimlik": "11111111111",
+  "sirketunvani": "şirket",
+  "sirketkurulustarihi": "1111-11-15",
+  "sirketadresi": "asdasdasdasdasdasda",
+  "vergidairesiili": "istanbul",
+  "vergikimliknumarasi": "11111111",
+  "vergidairesi": "manisa",
+  "dukkanadi": "Adem Öngel",
+  "dukkanurunleri": [
+    "123",
+    "947583:555:55",
+    "757640:333:33",
+    "477911:444:44",
+    "easy-wash-1-yuksek-tip-fotoselli-lavabo-bataryasi.---elektrikli-düzenleme778009:777:77",
+    "easy-wash-3-fotoselli-lavabo-bataryasi---elektrikli905348:888:88",
+    "webertherm-xps526640:23112:545"
+  ],
+  "userid": "3",
+  "verfication_number": "s",
+  "dukkanurl": "123878",
+  "Dukkan_UniqueID": "Yapx_167464502407619.230457221497655",
+  "dukkanphoto": "yapx_167464512673263.71634824669776.jpg",
+  "dukkanili": "45:Manisa",
+  "dukkanilcesi": "Salihli",
+  "dukkanyorum": [
+    "Yapx: Bu dükkan yorumlarınızı bekliyor.:5"
+  ],
+  "dukkanoysayisi": "1",
+  "dukkan_star": [
+    "5"
+  ],
+  "dukkan_av": "5",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1674645024081"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1676354131226"
+    }
+  },
+  "__v": 0,
+  "usertoken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0aW1lIjoiTW9uIEZlYiAxMyAyMDIzIDE0OjM0OjA2IEdNVCswMzAwIChHTVQrMDM6MDApIiwiZW1haWwiOiJhZGVtb25nZWxAaG90bWFpbC5jb20iLCJpYXQiOjE2NzYyODgwNDYsImV4cCI6MTY3Njg5Mjg0Nn0.gfPQwNdJEop2cCrabMyd8XrHGD7A8BdfDQwEwrxoa0c"
+},{
+  "_id": {
+    "$oid": "63d10fde910a5c5701e269f8"
+  },
+  "email": "erkanustali@gmail.com",
+  "sifre": "$2a$10$hPLkbvUzbb.lW6kFKrXzxOquch0gSg2IqJJNDdL0zS4f.Rdorn4RG",
+  "wishlist": [
+    "1"
+  ],
+  "sabittelefon": "4444444444",
+  "gsmtelefon": "4444444444",
+  "tckimlik": "88877799885",
+  "sirketunvani": "şirket",
+  "sirketkurulustarihi": "2018-09-09",
+  "sirketadresi": "adsadasdasda",
+  "vergidairesiili": "istanbul",
+  "vergikimliknumarasi": "111111112",
+  "vergidairesi": "manisa",
+  "dukkanadi": "Erkan Ustali",
+  "dukkanurunleri": [
+    "123",
+    "947583:123123:2323",
+    "757640:232:23423",
+    "477911:4545:4554",
+    "ack-ah17-04771-e27-siyah-gold-dekoratif-sarkit-armatur444369:3324:121",
+    "myra-dokunmatik-eviye-bataryasi940374:111334:121"
+  ],
+  "userid": "3",
+  "verfication_number": "s",
+  "dukkanurl": "531950",
+  "Dukkan_UniqueID": "Yapx_167464547098049.83475579228491",
+  "dukkanphoto": "yapx_167464561680093.87551512928785.jpg",
+  "dukkanili": "45:Manisa",
+  "dukkanilcesi": "Alaşehir",
+  "dukkanyorum": [
+    "Yapx: Bu dükkan yorumlarınızı bekliyor.:5"
+  ],
+  "dukkanoysayisi": "1",
+  "dukkan_star": [
+    "5"
+  ],
+  "dukkan_av": "5",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1674645470983"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1676287499825"
+    }
+  },
+  "__v": 0,
+  "usertoken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0aW1lIjoiU3VuIEZlYiAxMiAyMDIzIDEyOjIxOjAwIEdNVCswMzAwIChHTVQrMDM6MDApIiwiZW1haWwiOiJlcmthbnVzdGFsaUBnbWFpbC5jb20iLCJpYXQiOjE2NzYxOTM2NjAsImV4cCI6MTY3Njc5ODQ2MH0.CbQpo1nzfzIrYMu12XDe40-4GOpF4OJpRG8wfQ-YAYY"
+},{
+  "_id": {
+    "$oid": "63d11653910a5c5701e26bbb"
+  },
+  "email": "huseyinyilmaz@gmail.com",
+  "sifre": "$2a$10$o09ZouJGEQZqHQ35fQdFgeBqBfQsSdYXE08mIOAbR9DWBNJjSPywy",
+  "wishlist": [
+    "1"
+  ],
+  "sabittelefon": "2554655522",
+  "gsmtelefon": "5663221546",
+  "tckimlik": "12312312311",
+  "sirketunvani": "şirket",
+  "sirketkurulustarihi": "23652-02-11",
+  "sirketadresi": "manisa",
+  "vergidairesiili": "istanbul",
+  "vergikimliknumarasi": "1111111132",
+  "vergidairesi": "manisa",
+  "dukkanadi": "Hüseyin Yılmaz",
+  "dukkanurunleri": [
+    "123",
+    "947583:112:2323",
+    "757640:345345345:345345",
+    "477911:123567:12233",
+    "camsan-avangard-odeon-mese-10mm-laminant-parke775659:232:3423",
+    "weberjoint-hr-flex803410:222:53242"
+  ],
+  "userid": "3",
+  "verfication_number": "s",
+  "dukkanurl": "554798",
+  "Dukkan_UniqueID": "Yapx_167464712300752.56302768531131",
+  "dukkanphoto": "test.png",
+  "dukkanili": "20:Denizli",
+  "dukkanilcesi": "Serinhisar",
+  "dukkanyorum": [
+    "Yapx: Bu dükkan yorumlarınızı bekliyor.:5"
+  ],
+  "dukkanoysayisi": "1",
+  "dukkan_star": [
+    "5"
+  ],
+  "dukkan_av": "5",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1674647123010"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1676287462761"
+    }
+  },
+  "__v": 0,
+  "usertoken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0aW1lIjoiV2VkIEphbiAyNSAyMDIzIDE0OjQ3OjQ4IEdNVCswMzAwIChHTVQrMDM6MDApIiwiZW1haWwiOiJodXNleWlueWlsbWF6QGdtYWlsLmNvbSIsImlhdCI6MTY3NDY0NzI2OCwiZXhwIjoxNjc1MjUyMDY4fQ.TSdfS0ORax6hIuDYFDcUGJpTIJac8lp5c-lEPnUgh9A"
+},{
+  "_id": {
+    "$oid": "63d241e999472b4e8c874cb1"
+  },
+  "isim": "aa",
+  "soyisim": "aa",
+  "email": "aa@aa.com",
+  "sifre": "$2a$10$4wo3QJ41xkJFjOWWNUZnSuA4IN4eSeo.I8jXmHRi3eqDAGs8kAZW.",
+  "wishlist": [
+    "1"
+  ],
+  "dukkanurunleri": [],
+  "userid": "1",
+  "verfication_number": "989066",
+  "dukkanyorum": [],
+  "dukkan_star": [],
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1674723817730"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1674723829140"
+    }
+  },
+  "__v": 0,
+  "dogrulama_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0aW1lIjoiVGh1IEphbiAyNiAyMDIzIDEyOjAzOjM3IEdNVCswMzAwIChHTVQrMDM6MDApIiwiZW1haWwiOiJhYUBhYS5jb20iLCJpYXQiOjE2NzQ3MjM4MTcsImV4cCI6MTY3NDgxMDIxN30.lmR7Ol70Q3PMR7QioH747h9fuzReQbq7fG4rTxhLQRU",
+  "usertoken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0aW1lIjoiVGh1IEphbiAyNiAyMDIzIDEyOjAzOjQ5IEdNVCswMzAwIChHTVQrMDM6MDApIiwiZW1haWwiOiJhYUBhYS5jb20iLCJpYXQiOjE2NzQ3MjM4MjksImV4cCI6MTY3NDgxMDIyOX0.P746w09HpeQQBoLjFnlybgEmPltwFQXZFCrMb-GXaPY"
+},{
+  "_id": {
+    "$oid": "63d50243059fbf7c4d352f2e"
+  },
+  "isim": "İzzet Emin",
+  "soyisim": "Ayan",
+  "email": "izzeteminn@gmail.com",
+  "sifre": "$2a$10$YpRtA2P2iPN/aTx5E7EkH.e0GX4HVE0k/aKCOpw3PlHYF2ym3Crg2",
+  "wishlist": [
+    "1"
+  ],
+  "dukkanurunleri": [],
+  "userid": "1",
+  "verfication_number": "524002",
+  "dukkanyorum": [],
+  "dukkan_star": [],
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1674904131695"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1676248391955"
+    }
+  },
+  "__v": 0,
+  "dogrulama_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0aW1lIjoiU2F0IEphbiAyOCAyMDIzIDExOjA4OjUxIEdNVCswMDAwIChDb29yZGluYXRlZCBVbml2ZXJzYWwgVGltZSkiLCJlbWFpbCI6Iml6emV0ZW1pbm5AZ21haWwuY29tIiwiaWF0IjoxNjc0OTA0MTMxLCJleHAiOjE2NzQ5OTA1MzF9.OjwKGY32gKMdb7S2Lboof9szR9w0tUns_UOxntyqrD8",
+  "usertoken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0aW1lIjoiTW9uIEZlYiAxMyAyMDIzIDAzOjMzOjExIEdNVCswMzAwIChHTVQrMDM6MDApIiwiZW1haWwiOiJpenpldGVtaW5uQGdtYWlsLmNvbSIsImlhdCI6MTY3NjI0ODM5MSwiZXhwIjoxNjc2ODUzMTkxfQ.feVHbLsQK1S_CFphiJhzJKh4BV5xO3vOEwKUIbfEqN0"
+},{
+  "_id": {
+    "$oid": "63df9dc913a5f6607c40bd86"
+  },
+  "isim": "test",
+  "soyisim": "test",
+  "email": "test@test.com",
+  "sifre": "$2a$10$Hckxj9l.SQiB7IYLT3lKwe8i.pnGMpO3uzVvsNGuJ21F2Bi7nVEFW",
+  "wishlist": [
+    "1"
+  ],
+  "dukkanurunleri": [],
+  "userid": "1",
+  "verfication_number": "286838",
+  "dukkanyorum": [],
+  "dukkan_star": [],
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1675599305984"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1676067770758"
+    }
+  },
+  "__v": 0,
+  "dogrulama_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0aW1lIjoiU3VuIEZlYiAwNSAyMDIzIDE1OjE1OjA2IEdNVCswMzAwIChHTVQrMDM6MDApIiwiZW1haWwiOiJ0ZXN0QHRlc3QuY29tIiwiaWF0IjoxNjc1NTk5MzA2LCJleHAiOjE2NzU2ODU3MDZ9.YViJ7zOUfZbQuI9gFjn7GuoqpE4liWI7eB5NFH7vJMs",
+  "usertoken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0aW1lIjoiU2F0IEZlYiAxMSAyMDIzIDAxOjIyOjUwIEdNVCswMzAwIChHTVQrMDM6MDApIiwiZW1haWwiOiJ0ZXN0QHRlc3QuY29tIiwiaWF0IjoxNjc2MDY3NzcwLCJleHAiOjE2NzY2NzI1NzB9.95TcVB6JbwuBDmnhMreVdJ8PSHR4Mj6Dbzsmxbmidow"
+},{
+  "_id": {
+    "$oid": "63e98625099ade2f572141e4"
+  },
+  "email": "sercankantar98@gmail.com",
+  "sifre": "$2a$10$MU6U6B9vvfk.df9NkBwNWe1Bp9dQRJimWsVOZSjF1vCp.G/YqtEi.",
+  "wishlist": [
+    "1"
+  ],
+  "sabittelefon": "54654656",
+  "gsmtelefon": "56564564546",
+  "tckimlik": "30051565054",
+  "sirketunvani": "dsfsdf",
+  "sirketkurulustarihi": "2000-05-18",
+  "sirketadresi": "asdasdsa",
+  "vergidairesiili": "asdasdsad",
+  "vergikimliknumarasi": "3005156",
+  "vergidairesi": "3516455",
+  "dukkanadi": "asdsadads",
+  "dukkanurunleri": [
+    "123",
+    "forlife-fl-1243-9w-6500k-beyaz-e27-led-ampul955821:111:111"
+  ],
+  "userid": "3",
+  "verfication_number": "s",
+  "dukkanurl": "144844",
+  "Dukkan_UniqueID": "Yapx_167624861308864.45965886784022",
+  "dukkanphoto": "test.png",
+  "dukkanili": "3:Afyonkarahisar",
+  "dukkanilcesi": "Bayat",
+  "dukkanyorum": [
+    "Yapx: Bu dükkan yorumlarınızı bekliyor.:5"
+  ],
+  "dukkanoysayisi": "1",
+  "dukkan_star": [
+    "5"
+  ],
+  "dukkan_av": "5",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1676248613091"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1676289905536"
+    }
+  },
+  "__v": 0,
+  "usertoken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0aW1lIjoiTW9uIEZlYiAxMyAyMDIzIDAzOjM4OjU3IEdNVCswMzAwIChHTVQrMDM6MDApIiwiZW1haWwiOiJzZXJjYW5rYW50YXI5OEBnbWFpbC5jb20iLCJpYXQiOjE2NzYyNDg3MzcsImV4cCI6MTY3Njg1MzUzN30.1-JKwUzssceIN6HHkfZbGtLAOuRIITjeHx6Yi-Pu5dk"
+}]
