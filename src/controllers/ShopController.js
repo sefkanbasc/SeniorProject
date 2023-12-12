@@ -10,10 +10,18 @@ const IsDecoded = async (req,res,next) => {
         const token = req.cookies.usertoken;
         const verified = jwt.verify(token, jwtSecretKey, async (e, decoded) => {
         if (decoded) {
+            const layout = '../layouts/mainSecond_Layout'
+            req.customData = {
+                message: layout,
+              };
             next()
         }
         else{
-            res.render('user/loginPage', { layout: '../layouts/mainSecond_Layout', title: `Keep | Send Mail`, description: ``, keywords: `` })
+            const layout = '../layouts/mainSecond_Layout'
+            req.customData = {
+                message: layout,
+              };
+            next()
         }
     })
     }
@@ -23,12 +31,108 @@ const IsDecoded = async (req,res,next) => {
 }
 const homePage = async (req,res,next) => {
     try{
-        res.render('user/userHomePage', { layout: '../layouts/mainHome_Layout', title: `Keep | Send Mail`, description: ``, keywords: `` })
+        res.render('user/userHomePage', { layout: req.customData.message, title: `Keep | Send Mail`, description: ``, keywords: `` })
     }
     catch (err){
         console.log(err)
     }
 }
+const ArchivesGet = async (req,res,next) => {
+    try{
+        res.render('user/archives', { layout: req.customData.message, title: `Keep | Send Mail`, description: ``, keywords: `` })
+    }
+    catch (err){
+        console.log(err)
+    }
+}
+const AnnouncementsGet = async (req,res,next) => {
+    try{
+        res.render('user/announcements', { layout: req.customData.message, title: `Keep | Send Mail`, description: ``, keywords: `` })
+    }
+    catch (err){
+        console.log(err)
+    }
+}
+const ContactGet = async (req,res,next) => {
+    try{
+        res.render('user/contact', { layout: req.customData.message, title: `Keep | Send Mail`, description: ``, keywords: `` })
+    }
+    catch (err){
+        console.log(err)
+    }
+}
+const AboutTheJournalGet = async (req,res,next) => {
+    try{
+        res.render('user/aboutthejournal', { layout: req.customData.message, title: `Keep | Send Mail`, description: ``, keywords: `` })
+    }
+    catch (err){
+        console.log(err)
+    }
+}
+const SubmissionGet = async (req,res,next) => {
+    try{
+        res.render('user/submission', { layout: req.customData.message, title: `Keep | Send Mail`, description: ``, keywords: `` })
+    }
+    catch (err){
+        console.log(err)
+    }
+}
+const editorialTeamGet = async (req,res,next) => {
+    try{
+        res.render('user/editorialTeam', { layout: req.customData.message, title: `Keep | Send Mail`, description: ``, keywords: `` })
+    }
+    catch (err){
+        console.log(err)
+    }
+}
+const privacyStatementGet = async (req,res,next) => {
+    try{
+        res.render('user/privacyStatement', { layout: req.customData.message, title: `Keep | Send Mail`, description: ``, keywords: `` })
+    }
+    catch (err){
+        console.log(err)
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 const sayimListesi = async (req,res,next) => {
     try{
         const ozet = false
@@ -189,12 +293,19 @@ const logout = (req, res, next) => {
 module.exports = {
     Login,
     homePage,
+    AnnouncementsGet,
+    AboutTheJournalGet,
     IsDecoded,
     CancelSayim,
     EditProduct,
+    SubmissionGet,
+    privacyStatementGet,
+    ContactGet,
     LoginPost,
+    editorialTeamGet,
     sayimDetaylari,
     OzetSayimListesi,
+    ArchivesGet,
     Consolidation,
     sayimListesi,
     TopluConsolidation,

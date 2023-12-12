@@ -4,6 +4,14 @@ const multerConfig = require('../config/multerConfig');
 const ShopController = require('../controllers/ShopController');
 
 router.get('/',ShopController.IsDecoded,ShopController.homePage);
+router.get('/archives',ShopController.IsDecoded,ShopController.ArchivesGet)
+router.get('/announcement',ShopController.IsDecoded,ShopController.AnnouncementsGet)
+router.get('/contact',ShopController.IsDecoded,ShopController.ContactGet)
+router.get('/aboutTheJournal',ShopController.IsDecoded,ShopController.AboutTheJournalGet)
+router.get('/Submission',ShopController.IsDecoded,ShopController.SubmissionGet)
+router.get('/editorialTeam',ShopController.IsDecoded,ShopController.editorialTeamGet)
+router.get('/privacyStatement',ShopController.IsDecoded,ShopController.privacyStatementGet)
+
 
 router.get('/sayimListesi',ShopController.IsDecoded,ShopController.sayimListesi)
 router.get('/sayimDetaylari',ShopController.IsDecoded,ShopController.sayimDetaylari)
