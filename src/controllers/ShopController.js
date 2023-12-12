@@ -79,7 +79,7 @@ const SubmissionGet = async (req,res,next) => {
 }
 const RegisterGet = async (req,res,next) => {
     try{
-        res.render('user/submission', { layout: req.customData.message, title: `Keep | Send Mail`, description: ``, keywords: `` })
+        res.render('user/register', { layout: req.customData.message, title: `Keep | Send Mail`, description: ``, keywords: `` })
     }
     catch (err){
         console.log(err)
