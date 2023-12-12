@@ -1,11 +1,19 @@
 const User = require('../models/userModel');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
+<<<<<<< Updated upstream:src/controllers/ShopController.js
 const Sayim = require('../models/sayimModel');
 const Data = require('../models/dataModel');
 const Urun = require('../models/dataModel');
 const IsDecoded = async (req, res, next) => {
     try {
+=======
+const Sayim = require('../../../models/sayimModel');
+const Data = require('../../../models/dataModel');
+const Urun = require('../../../models/dataModel');
+const IsDecoded = async (req,res,next) => {
+    try{
+>>>>>>> Stashed changes:src/views/pages/admin/ShopController.js
         let jwtSecretKey = process.env.JWT_SECRET_KEY;
         const token = req.cookies.usertoken;
         const verified = jwt.verify(token, jwtSecretKey, async (e, decoded) => {
