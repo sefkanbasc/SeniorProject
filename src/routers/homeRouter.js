@@ -24,6 +24,7 @@ router.get('/logout',ShopController.logout)
 router.post('/test',homeController.test)
 
 router.post('/loginPost',ShopController.LoginPost)
+router.post('/registerPost', ShopController.Register);
 router.post('/Consolidation/:id',ShopController.IsDecoded,ShopController.Consolidation)
 router.post('/editProduct/:id',ShopController.IsDecoded,ShopController.EditProduct)
 router.post('/CancelSayim/:id',ShopController.IsDecoded,ShopController.CancelSayim)

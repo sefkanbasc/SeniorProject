@@ -1,13 +1,17 @@
 <div class="register-form">
+    <form action="/registerPost" method="post" enctype="application/x-www-form-urlencoded" class="register-form">
+
     <h1>Register</h1>
-    <a href="https://sandbox.orcid.org/oauth/authorize?response_type=code&scope=%2Fauthenticate&redirect_uri=http:%2F%2Fctc.karabuk.edu.tr%2Findex.php%2Fmain%2Forcidapi%2ForcidAuthorize%3FtargetOp%3Dregister"
+    <!--<a href="https://sandbox.orcid.org/oauth/authorize?response_type=code&scope=%2Fauthenticate&redirect_uri=http:%2F%2Fctc.karabuk.edu.tr%2Findex.php%2Fmain%2Forcidapi%2ForcidAuthorize%3FtargetOp%3Dregister"
         class="btn-orcid">Create or connect your ORCID iD</a>
     <p>What is <a href="orcid.html" style="color: blue;">ORCID</a>?</p>
     <h2>Profile</h2>
-    <label for="given-name">Given Name*</label>
-    <input type="text" id="given-name" name="given-name" required>
-    <label for="family-name">Family Name*</label>
-    <input type="text" id="family-name" name="family-name" required>
+        -->
+
+    <label for="givenName">Given Name*</label>
+    <input type="text" id="givenName" name="givenName" required>
+    <label for="familyName">Family Name*</label>
+    <input type="text" id="familyName" name="familyName" required>
     <label for="affiliation">Affiliation*</label>
     <input type="text" id="affiliation" name="affiliation" required>
     <label for="country">Country*</label>
@@ -273,55 +277,24 @@
     <input type="password" id="repeat-password" name="repeat-password" required>
     <h2>Agreements</h2>
     <label>
-        <input type="checkbox" name="agreement1" value="yes">
+        <input type="checkbox" name="privacyAgreement" id ="privacyAgreement"  value="true">
         Yes, I agree to have my data collected and stored according to the <a href="privacy.html">privacy
             statement</a>.
     </label>
     <label>
-        <input type="checkbox" name="agreement2" value="yes">
+        <input type="checkbox" name="notifyAgreement" id ="notifyAgreement" value="true">
         Yes, I would like to be notified of new publications and announcements.
     </label>
     <label>
-        <input type="checkbox" name="agreement3" value="yes">
+        <input type="checkbox" name="journalAgreement" id ="journalAgreement" value="true">
         Yes, I would like to be contacted with requests to review submissions to this journal.
     </label>
     <button type="submit" class="rgs-button">Register</button>
     <p>Already have an account? <a href="login.html" style="color: blue;">Login</a></p>
+    </form>
 </div>
 
 
-
-
-<div class="container px-4 px-lg-5">
-    <div class="row gx-4 gx-lg-5 justify-content-center">
-        <div class="col-md-10 col-lg-8 col-xl-7">
-
-            <div class="right">
-                <h2>Language</h2>
-                <a href="#" style="color:blue;">English</a><br><br>
-                <a href="#" style="color: blue;">Türkçe</a>
-
-                <br><br><br>
-
-                <h2>Information</h2>
-                <a href="forReaders.html" style="color: blue;">For Readers</a><br><br>
-                <a href="#" style="color: blue;">For Authors</a><br><br>
-                <a href="#" style="color: blue;">For Libraians</a>
-
-            </div>
-
-
-        </div>
-    </div>
-</div>
-<br><br><br><br>
-<div class="sabit-bolge">
-    <div class="arka-plan">
-        <div class="logo">
-            <img src="assets/img/ojs_brand.png" alt="Logo">
-        </div>
-    </div>
-</div>
 
 <!-- Bootstrap core JS-->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>

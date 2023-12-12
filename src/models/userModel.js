@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const UserSchema = new Schema({
-    username: {
+  username: {
         type: String,
         trim: true,
     },
@@ -11,31 +11,28 @@ const UserSchema = new Schema({
         required: true,
         trim: true
     },
-    Name: {
+    affiliation: {
       type: String,
     },
-    Surname:{
+    email:{
       type: String,
     },
-    Department: {
+    givenName: {
       type: String,
-      trim: true
     },
-    userUniqueID: {
+    privacyAgreement: {
       type: String,
-      trim: true
     },
-    Permission: {
-      type: Number,
-      trim: true
-    },
-    PhoneNumber: {
+   
+    notifyAgreement: {
       type: String,
-      trim: true
     },
-    Email: {
+   
+    journalAgreement: {
       type: String,
-      trim: true
+    },
+    role:{
+      type:String
     },
     active:{
       type: String,
