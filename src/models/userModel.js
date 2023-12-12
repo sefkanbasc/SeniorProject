@@ -32,7 +32,8 @@ const UserSchema = new Schema({
       type: String,
     },
     role:{
-      type:String
+      type:Number,
+      default: 1
     },
     active:{
       type: String,
