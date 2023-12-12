@@ -77,6 +77,14 @@ const SubmissionGet = async (req,res,next) => {
         console.log(err)
     }
 }
+const RegisterGet = async (req,res,next) => {
+    try{
+        res.render('user/submission', { layout: req.customData.message, title: `Keep | Send Mail`, description: ``, keywords: `` })
+    }
+    catch (err){
+        console.log(err)
+    }
+}
 const editorialTeamGet = async (req,res,next) => {
     try{
         res.render('user/editorialTeam', { layout: req.customData.message, title: `Keep | Send Mail`, description: ``, keywords: `` })
@@ -301,6 +309,7 @@ module.exports = {
     SubmissionGet,
     privacyStatementGet,
     ContactGet,
+    RegisterGet,
     LoginPost,
     editorialTeamGet,
     sayimDetaylari,

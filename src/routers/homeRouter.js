@@ -11,6 +11,9 @@ router.get('/aboutTheJournal',ShopController.IsDecoded,ShopController.AboutTheJo
 router.get('/Submission',ShopController.IsDecoded,ShopController.SubmissionGet)
 router.get('/editorialTeam',ShopController.IsDecoded,ShopController.editorialTeamGet)
 router.get('/privacyStatement',ShopController.IsDecoded,ShopController.privacyStatementGet)
+router.get('/register',ShopController.IsDecoded,ShopController.privacyStatementGet)
+
+
 
 
 router.get('/sayimListesi',ShopController.IsDecoded,ShopController.sayimListesi)
