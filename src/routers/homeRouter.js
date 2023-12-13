@@ -13,7 +13,7 @@ router.get('/editorialTeam',UserController.IsDecoded,UserController.editorialTea
 router.get('/privacyStatement',UserController.IsDecoded,UserController.privacyStatementGet)
 router.get('/register',UserController.IsDecoded,UserController.RegisterGet)
 router.get('/user/panel',UserController.IsDecoded,UserController.userPanelMainPageGet)
-router.get('/user/user-add-thesis',UserController.IsDecoded,UserController.userPanelAddThesisPageGet)
+router.get('/user/useraddthesis',UserController.IsDecoded,UserController.userPanelAddThesisPageGet)
 
 
 router.get('/logout',UserController.logout)

@@ -31,7 +31,7 @@ const IsDecoded = async (req, res, next) => {
 }
 const homePage = async (req, res, next) => {
     try {
-        res.render('user/userHomePage', { layout: req.customData.message, title: `Keep | Send Mail`, description: ``, keywords: `` })
+        res.render('user/homePage', { layout: req.customData.message, title: `Keep | Send Mail`, description: ``, keywords: `` })
     }
     catch (err) {
         console.log(err)
@@ -122,7 +122,7 @@ const userPanelInfoPageGet = async (req,res,next) => {
 const userPanelAddThesisPageGet = async (req,res,next) => {
     try{
         const idUser = 0
-        res.render('user/panel/user-add-thesis', { layout: "../layouts/free", title: `Keep | Send Mail`, description: ``, keywords: ``,idUser })
+        res.render('user/panel/useraddthesis', { layout: "../layouts/free", title: `Keep | Send Mail`, description: ``, keywords: ``,idUser })
     }
     catch (err){
         console.log(err)
